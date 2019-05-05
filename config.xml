@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="be.studentenliederboek.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0">
+    <name>Studentenliederboek</name>
+    <description>
+        Eenvoudige partituren van studentenliederen.
+    </description>
+    <author email="vicmortelmans@gmail.com" href="https://www.studentenliederboek.be">
+        Studentenliederboek
+    </author>
+    <platform name="android"/>
+    <preference name="permissions" value="none"/>
+    <preference name="orientation" value="default"/>
+    <preference name="fullscreen" value="false"/>
+    <preference name="target-device" value="universal" />
+    <preference name="android-installLocation" value="auto"/>
+    <preference name="android-minSdkVersion" value="7"/>
+    <preference name="android-install Location" value="auto"/>
+    <icon src="icon.png"/>
+    <icon src="icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
+    <icon src="icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
+    <icon src="icon-72-hdpi.png" gap:platform="android" gap:qualifier="hdpi"/>
+    <icon src="icon-96-xhdpi.png" gap:platform="android" gap:qualifier="xhdpi"/>
+    <plugin name="cordova-plugin-inappbrowser"/>
+    <plugin name="cordova-plugin-whitelist" version="1"/>
+    <!--allow-navigation href="*" /-->
+    <allow-intent href="http://*/*"/>
+    <allow-intent href="https://*/*"/>
+    <access origin="*"/>
+</widget>

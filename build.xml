@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="all" name="Studentenliederboek">
+ <property name="saxon-pe.location.ant" value="/home/vic/Programs/jars/saxon9pe.jar"/>
+  
+
+ <target name="all" depends="level1,level2"/>
+ 
+ <target name="level1">
+  <apply executable="vim">
+    <!-- commands line parameters from https://stackoverflow.com/a/23237529/591336 -->
+    <arg line="-T"/>
+    <arg line="dumb"/>
+    <arg line="-n"/>
+    <arg line="-es"/>
+    <arg line="-S"/>
+    <arg line="instructions1.txt"/>
+    <srcfile/>
+    <fileset dir="www" includes="*.html"/>
+  </apply>
+ </target>
+
+ <target name="level2">
+  <apply executable="vim">
+    <!-- commands line parameters from https://stackoverflow.com/a/23237529/591336 -->
+    <arg line="-T"/>
+    <arg line="dumb"/>
+    <arg line="-n"/>
+    <arg line="-es"/>
+    <arg line="-S"/>
+    <arg line="instructions2.txt"/>
+    <srcfile/>
+    <fileset dir="www" includes="*/*.html"/>
+  </apply>
+ </target>
+</project>
