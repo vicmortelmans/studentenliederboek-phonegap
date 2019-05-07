@@ -3,7 +3,7 @@
  <property name="saxon-pe.location.ant" value="/home/vic/Programs/jars/saxon9pe.jar"/>
   
 
- <target name="all" depends="level1,level2"/>
+ <target name="all" depends="level1,level2,responsive"/>
  
  <target name="level1">
   <apply executable="vim">
@@ -31,5 +31,23 @@
     <srcfile/>
     <fileset dir="www" includes="*/*.html"/>
   </apply>
+ </target>
+
+ <target name="responsive">
+  <delete>
+    <fileset dir="." includes="www/media/posts/*/responsive/*-2xl.jpg"/>
+    <fileset dir="." includes="www/media/posts/*/responsive/*-lg.jpg"/>
+    <fileset dir="." includes="www/media/posts/*/responsive/*-sm.jpg"/>
+    <fileset dir="." includes="www/media/posts/*/responsive/*-sm2.jpg"/>
+    <fileset dir="." includes="www/media/posts/*/responsive/*-xl.jpg"/>
+    <fileset dir="." includes="www/media/posts/*/responsive/*-xs.jpg"/>
+    <fileset dir="." includes="www/media/posts/*/*.jpg"/>
+  </delete>
+  <move todir=".">
+    <fileset dir="." includes="www/media/posts/*/responsive/*-md.jpg"/>
+    <mapper type="glob" from="*-md.jpg" to="*-xs.jpg"/>
+  </move>
+  <copy file="style.css" tofile="www/assets/css/style.css"/><!-- removed 'lazyloading' style -->
+  <copy file="lazysizes.min.js" tofile="www/assets/js/lazysizes.min.js"/><!-- emptied -->
  </target>
 </project>
