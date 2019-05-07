@@ -40,7 +40,6 @@
     <fileset dir="." includes="www/media/posts/*/responsive/*-sm.jpg"/>
     <fileset dir="." includes="www/media/posts/*/responsive/*-sm2.jpg"/>
     <fileset dir="." includes="www/media/posts/*/responsive/*-xl.jpg"/>
-    <fileset dir="." includes="www/media/posts/*/responsive/*-xs.jpg"/>
     <fileset dir="." includes="www/media/posts/*/*.jpg"/>
   </delete>
   <move todir=".">
