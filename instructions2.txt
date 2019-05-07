@@ -1,2 +1,3 @@
 :%s/https:\/\/www.studentenliederboek.be/../g "make all hrefs to the website domain relative links to ../index.html
+:%s/https:\/\/code.jquery.com/../g " link to local jquery
 :wq
