@@ -3,7 +3,7 @@
  <property name="saxon-pe.location.ant" value="/home/vic/Programs/jars/saxon9pe.jar"/>
   
 
- <target name="all" depends="level1,level2,level3,responsive"/>
+ <target name="all" depends="level1,level2,level3,level4,responsive"/>
  
  <target name="level1">
   <apply executable="vim">
@@ -44,6 +44,20 @@
     <arg line="instructions3.txt"/>
     <srcfile/>
     <fileset dir="www" includes="*/*/*.html"/>
+  </apply>
+ </target>
+
+ <target name="level4">
+  <apply executable="vim">
+    <!-- commands line parameters from https://stackoverflow.com/a/23237529/591336 -->
+    <arg line="-T"/>
+    <arg line="dumb"/>
+    <arg line="-n"/>
+    <arg line="-es"/>
+    <arg line="-S"/>
+    <arg line="instructions4.txt"/>
+    <srcfile/>
+    <fileset dir="www" includes="*/*/*/*.html"/>
   </apply>
  </target>
 
