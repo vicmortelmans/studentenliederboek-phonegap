@@ -2,5 +2,6 @@
 :%s/https:\/\/www.studentenliederboek.be\///g "make all hrefs to the website domain relative links to index.html
 :%s/https:\/\/code.jquery.com\///g " link to local jquery
 :%s/\/" target/\/index.html" target/g " make links to directories explicit
+:%s/\/" class/\/index.html" class/g " make links to directories explicit ('Volgende' button)
 :%s/\/">/\/index.html">/g " make links to directories explicit
 :wq
